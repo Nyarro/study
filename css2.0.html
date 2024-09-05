@@ -40,6 +40,13 @@
             text-align: center;
         }
 
+        .score.score-2 {
+            border-radius: 10px;
+            min-height: 15px;
+            margin-top: 3px;
+            padding: 1px;
+        }
+
         .img-cart {
             display: inline-block;
             width: 15px;
@@ -55,13 +62,90 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-
+            color: white;
         }
 
         .bottom {
             border-bottom-style: dotted;
             border-bottom-color: orange;
             border-bottom-width: 2px
+        }
+
+        .hover-box {
+            margin: 5px;
+            width: 170px;
+            height: 20px;
+            text-align: left;
+            border-radius: 10px;
+            padding: 5px;
+            vertical-align: baseline;
+        }
+
+        .hover-box:hover {
+            background-color: #23429e;
+        }
+
+        .div2 {
+            margin: 15px 40px;
+            width: 200px;
+        }
+
+        .ib {
+            display: inline-block;
+        }
+
+        .text-or {
+            color: orange;
+            margin: 10px 48px;
+        }
+
+        .sub-text {
+            text-align: center;
+            padding: 5px;
+            color: orange;
+        }
+
+        .price {
+            color: white;
+            text-align: center;
+            display: inline-block;
+            margin: 0 15px 0 35px
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin: 0 35px;
+            display: inline-block;
+        }
+
+        .half {
+            height: 60%;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-size: cover;
+            overflow: hidden;
+            background-position: top;
+        }
+
+        .half2 {
+            height: 40%;
+            background-color: #1b3980;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px
+        }
+
+        .crt-icon {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/001/504/962/original/shopping-cart-icon-free-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden
         }
     </style>
 </head>
@@ -77,6 +161,52 @@
             <div class="score">
                 <div class="text">
                     0
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div2 bottom">
+        <div class="hover-box">
+            <div class="text ib"> Clothing</div>
+            <div class="score score-2 text">120</div>
+        </div>
+        <div class="hover-box">
+            <div class="text ib"> Electronics</div>
+            <div class="score score-2 text">8</div>
+        </div>
+        <div class="hover-box">
+            <div class="text ib"> Lifestyle</div>
+            <div class="score score-2 text">10</div>
+        </div>
+        <div class="hover-box">
+            <div class="text ib"> Home&Furniture</div>
+            <div class="score score-2 text">8</div>
+        </div>
+        <div class="hover-box">
+            <div class="text ib"> Cosmetics</div>
+            <div class="score score-2 text">10</div>
+        </div>
+        <div class="hover-box">
+            <div class="text ib"> Pets Goods</div>
+            <div class="score score-2 text">10</div>
+        </div>
+    </div>
+    <div>
+        <div class=text-or>Recently Watched</div>
+    </div>
+    <div class="square">
+        <div class="half"
+             style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
+        </div>
+        <div class="half2">
+            <div>
+                <div class="sub-text">
+                    Hoodie
+                </div>
+                <div>
+                    <div class="price"> 700$</div>
+                    <div class="crt-icon">
+                    </div>
                 </div>
             </div>
         </div>
