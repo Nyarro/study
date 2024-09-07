@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
     <style>
         .body {
             background-color: #182b63;
+            font-size: 10px;
+            font-family: "Roboto Light", sans-serif ;
         }
 
         .logo {
             display: inline-block;
-            margin: 20px;
+            margin: 10px 5px 10px 15px;
             vertical-align: baseline;
-            padding: 5px 5px 15px 5px;
+            padding: 5px 5px 10px 5px;
         }
 
         .cool-shop {
@@ -34,15 +40,16 @@
             background-color: orange;
             display: inline-block;
             color: white;
-            width: 30px;
+            min-width: 30px;
             min-height: 30px;
             vertical-align: top;
             text-align: center;
         }
 
         .score.score-2 {
-            border-radius: 10px;
+            border-radius: 15px;
             min-height: 15px;
+            min-width: 15px;
             margin-top: 3px;
             padding: 1px;
         }
@@ -64,6 +71,9 @@
             white-space: nowrap;
             color: white;
         }
+        .text.text15{
+            font-size: 16px;
+        }
 
         .bottom {
             border-bottom-style: dotted;
@@ -72,7 +82,6 @@
         }
 
         .hover-box {
-            margin: 5px;
             width: 170px;
             height: 20px;
             text-align: left;
@@ -86,8 +95,9 @@
         }
 
         .div2 {
-            margin: 15px 40px;
+            margin: 10px 40px;
             width: 200px;
+            padding-bottom: 8px;
         }
 
         .ib {
@@ -116,8 +126,7 @@
             width: 100px;
             height: 100px;
             border-radius: 10px;
-            margin: 0 35px;
-            display: inline-block;
+            margin: 10px 35px;
         }
 
         .half {
@@ -159,7 +168,7 @@
             <img class="img-cart" src="https://img.icons8.com/ios/50/FFFFFF/shopping-cart--v1.png"
                  alt="shopping-cart"/>
             <div class="score">
-                <div class="text">
+                <div class="text text15">
                     0
                 </div>
             </div>
@@ -193,6 +202,23 @@
     </div>
     <div>
         <div class=text-or>Recently Watched</div>
+    </div>
+    <div class="square">
+        <div class="half"
+             style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
+        </div>
+        <div class="half2">
+            <div>
+                <div class="sub-text">
+                    Hoodie
+                </div>
+                <div>
+                    <div class="price"> 700$</div>
+                    <div class="crt-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="square">
         <div class="half"
