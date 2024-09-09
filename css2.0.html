@@ -11,7 +11,7 @@
         .body {
             background-color: #182b63;
             font-size: 10px;
-            font-family: "Roboto Light", sans-serif ;
+            font-family: "Roboto Light", sans-serif;
         }
 
         .logo {
@@ -40,18 +40,21 @@
             background-color: orange;
             display: inline-block;
             color: white;
-            min-width: 30px;
+            width: 30px;
             min-height: 30px;
             vertical-align: top;
             text-align: center;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
         }
 
         .score.score-2 {
+            display: inline-block;
             border-radius: 15px;
             min-height: 15px;
+            max-width: 15px;
             min-width: 15px;
             margin-top: 3px;
-            padding: 1px;
+            padding: 0;
         }
 
         .img-cart {
@@ -70,8 +73,11 @@
             overflow: hidden;
             white-space: nowrap;
             color: white;
+            margin: 1px;
+            vertical-align: center;
         }
-        .text.text15{
+
+        .text.text15 {
             font-size: 16px;
         }
 
@@ -156,6 +162,15 @@
             background-position: center;
             overflow: hidden
         }
+
+        .add5 {
+            margin: 0 48px;
+            color: orange;
+            border-bottom-style: dashed;
+            border-color: red;
+            border-width: 1px;
+            display: inline-block
+        }
     </style>
 </head>
 <body class="body">
@@ -236,6 +251,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="add5">
+        add 5 more
     </div>
 </div>
 </body>
