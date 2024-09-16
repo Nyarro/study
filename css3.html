@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <style>
+        body {
+            background-image: linear-gradient(to top right, #365071, #6c5879);
+            font-size: 10px;
+            font-family: "Roboto Light", sans-serif;
+        }
+
+        aside {
+            display: inline-block;
+            width: 230px;
+            margin: 0 50px 0 80px;
+        }
+
+        .logo {
+        }
+
+        .logo-left {
+            display: inline-block;
+            content: url("shop_cart.png");
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+
+        .cart {
+            display: inline-block;
+            border-radius: 20px;
+            background-color: #645c74;
+            vertical-align: middle;
+            margin-left: 55px;
+        }
+
+        .cart-img-logo {
+            display: inline-block;
+            content: url("https://img.icons8.com/ios/50/FFFFFF/shopping-cart--v1.png");
+            width: 10px;
+            height: 10px;
+            padding: 0 1px 0 8px;
+            vertical-align: text-top;
+        }
+
+        .counter-main {
+            line-height: 1;
+            background-color: #edab89;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            vertical-align: middle;
+            max-width: 20px;
+        }
+
+        .counter-cart {
+            border-radius: 20px;
+            padding: 6px 9px;
+            font-size: 12px;
+        }
+
+        .counter-menu {
+            border-radius: 10px;
+            padding: 2px 4px;
+            font-size: 10px;
+            margin-left: 2px;
+        }
+
+        .section {
+            border-bottom: 1px dashed #edab89;
+            padding: 20px 0;
+        }
+
+        .menu {
+        }
+
+        .menu .menu-item {
+            border-radius: 8px;
+            color: white;
+            padding: 5px 20px;
+            margin: 5px 30px;
+        }
+
+        .menu .menu-item:hover {
+            background-color: rgba(54, 80, 113, 0.5);
+            cursor: pointer;
+        }
+
+        .text-menu {
+            display: inline-block;
+            line-height: 1;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+
+        .text-under-menu {
+            display: inline-block;
+            color: #edab89;
+            font-size: 14px;
+            margin: 0 0 20px 45px;
+
+        }
+
+        .text-under-menu:hover {
+            cursor: pointer;
+            border-bottom: 1px solid red;
+        }
+
+        .card {
+            width: 160px;
+            height: 160px;
+            margin: 0 10px 15px 40px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .photo-half {
+            height: 60%;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-size: cover;
+            overflow: hidden;
+            background-position: top;
+        }
+
+        .under-half {
+            height: 40%;
+            background-color: #645c74;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px
+        }
+
+        .card-text {
+            text-align: center;
+            color: #edab89;
+            font-size: 14px;
+        }
+
+        .name-price {
+            padding-top: 9px;
+        }
+
+        .card-text-aside {
+            margin-bottom: 5px;
+            vertical-align: middle;
+        }
+
+        .card-text-main {
+            margin-bottom: 3px;
+        }
+
+        .price {
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 16px;
+
+        }
+
+        .price-aside {
+            display: inline-block;
+            padding: 0 30px 0 63px;
+        }
+
+        .price-main {
+        }
+
+        .price-logo {
+            margin-top: 9px;
+        }
+
+        .icon-cart {
+            border-radius: 20px;
+            display: inline-block;
+            background-color: #e56b6e;
+            background-image: url('cart-arrow-down 4 (1).png');
+            background-size: 10px 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .card .icon-cart-aside {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+
+        }
+
+
+        .card-main .icon-cart-main {
+            height: 36px;
+            width: 36px;
+            position: absolute;
+            top: 18%;
+            left: 18%;
+        }
+
+        .card:hover {
+            cursor: pointer;
+            scale: 102%;
+        }
+
+        .text-and5more {
+            color: #edab89;
+            border-bottom-style: dashed;
+            border-color: red;
+            border-width: 1px;
+            display: inline-block;
+            font-size: 14px;
+            margin: 10px 0 0 85px;
+        }
+
+        .text-and5more:hover {
+            cursor: pointer;
+            border-style: none;
+
+        }
+
+        .site-bar-card-list {
+        }
+
+        aside > div:last-child {
+            border-bottom: 0
+        }
+
+        main {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .logo-main {
+            content: url("main-logo.png");
+            margin-top: 30px;
+        }
+
+        .top-card-list {
+
+        }
+
+        .top-card-list .text-card-list-main {
+            font-size: 28px;
+            color: white;
+            margin: 10px 0 25px 30px;
+        }
+
+        .top-card-list .card-list {
+
+        }
+
+        .card-main-full {
+            display: inline-block;
+            padding: 15px;
+            margin-left: 30px;
+        }
+
+        .card-main-full:first-child {
+            margin-left: 0;
+        }
+
+        .card-main-full:hover {
+            cursor: pointer;
+            background-color: rgba(54, 80, 113, 0.5);
+            border-radius: 20px;
+        }
+
+        .top-card-list .card-main {
+            position: relative;
+            height: 180px;
+            width: 180px;
+            border-radius: 20px;
+            background-image: url("iphone15.png");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .card-main-full .main-card-text {
+            margin-top: 7px;
+        }
+
+        .cart-bg {
+            background-color: rgba(229, 107, 110, 0.5);
+            height: 56px;
+            width: 56px;
+            border-radius: 56px;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+            left: 34%;
+        }
+    </style>
+</head>
+<body>
+<aside>
+    <div class="logo section">
+        <div class="logo-left"></div>
+        <div class="cart">
+            <div class="cart-img-logo"></div>
+            <div class=" counter-main counter-cart">0</div>
+        </div>
+    </div>
+    <div class="menu section">
+        <nav>
+            <div class="menu-item">
+                <div class="text-menu">Clothing</div>
+                <div class="counter-main counter-menu"> 120</div>
+            </div>
+            <div class="menu-item">
+                <div class="text-menu">Electronics</div>
+                <div class="counter-main counter-menu"> 8</div>
+            </div>
+            <div class="menu-item">
+                <div class="text-menu">Lifestyle</div>
+                <div class="counter-main counter-menu"> 10</div>
+            </div>
+            <div class="menu-item">
+                <div class="text-menu">Home&Furniture</div>
+                <div class="counter-main counter-menu"> 8</div>
+            </div>
+            <div class="menu-item">
+                <div class="text-menu">Cosmetics</div>
+                <div class="counter-main counter-menu"> 10</div>
+            </div>
+            <div class="menu-item">
+                <div class="text-menu">Pets Goods</div>
+                <div class="counter-main counter-menu"> 10</div>
+            </div>
+        </nav>
+    </div>
+    <div class="site-bar-card-list section">
+        <div class=text-under-menu>Recently Watched</div>
+        <div class="card">
+            <div class="photo-half"
+                 style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
+            </div>
+            <div class="under-half">
+                <div class="name-price">
+                    <div class="card-text card-text-aside"> Hoodie</div>
+                    <div class="price-logo">
+                        <div class="price price-aside"> 600$</div>
+                        <div class="icon-cart icon-cart-aside"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="photo-half"
+                 style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
+            </div>
+            <div class="under-half">
+                <div class="card-text card-text-aside"> Hoodie</div>
+                <div class="price price-aside"> 600$</div>
+                <div class="icon-cart icon-cart-aside"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="photo-half"
+                 style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
+            </div>
+            <div class="under-half">
+                <div class="card-text card-text-aside"> Hoodie</div>
+                <div class="price price-aside"> 600$</div>
+                <div class="icon-cart icon-cart-aside"></div>
+            </div>
+        </div>
+        <div class="text-and5more">and 5 more</div>
+    </div>
+</aside>
+<main>
+    <div class="logo-main"></div>
+    <div class="top-card-list section">
+        <div class="text-card-list-main"> Electronics</div>
+        <div class="card-list">
+            <div class="card-main-full">
+                <div class="card-main">
+                    <div class="cart-bg">
+                        <div class="icon-cart icon-cart-main"></div>
+                    </div>
+                </div>
+                <div class="main-card-text">
+                    <div class="card-text card-text-main">Iphone</div>
+                    <div class="price price-main">700$</div>
+                </div>
+            </div>
+            <div class="card-main-full">
+                <div class="card-main">
+                    <div class="cart-bg">
+                        <div class="icon-cart icon-cart-main"></div>
+                    </div>
+                </div>
+                <div class="main-card-text">
+                    <div class="card-text card-text-main">Iphone</div>
+                    <div class="price price-main">700$</div>
+                </div>
+            </div>
+            <div class="card-main-full">
+                <div class="card-main">
+                    <div class="cart-bg">
+                        <div class="icon-cart icon-cart-main"></div>
+                    </div>
+                </div>
+                <div class="main-card-text">
+                    <div class="card-text card-text-main">Iphone</div>
+                    <div class="price price-main">700$</div>
+                </div>
+            </div>
+            <div class="card-main-full">
+                <div class="card-main">
+                    <div class="cart-bg">
+                        <div class="icon-cart icon-cart-main"></div>
+                    </div>
+                </div>
+                <div class="main-card-text">
+                    <div class="card-text card-text-main">Iphone</div>
+                    <div class="price price-main">700$</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
