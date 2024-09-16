@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #my-element {
+            background: #1b3980;
+        }
+        .my-element-1 {
+            background: bisque;
+        }
+        .class-2 {
+            background: bisque;
+        }
+        .my-element-1.class-2 {
+
+        }
+        .my-element-1 .target {
+            background: cadetblue;
+        }
+        div {
+            padding: 10px;
+        }
+        [rel="author"]:hover {
+            background: brown;
+        }
+        .my-element-1 , .class-2 {
+
+        }
+    </style>
+</head>
+<body>
+<div id="my-element">My element</div>
+<div class="target" rel="author">target</div>
+<div class="my-element-1 class-2">My element</div>
+<div class="my-element-1" rel="alternate">My element</div>
+<div class="my-element-1">My element</div>
+<div class="my-element-1">My element<div class="target">target</div></div>
+
+</body>
+</html>
