@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Elements Example</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            /* Запрещаем масштабирование для элементов */
+            overflow: hidden;
+        }
+
+        /* Контейнер для блоков */
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Левый блок с фиксированной позицией и размером */
+        .left-box {
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+        }
+
+        /* Правый блок с фиксированной позицией и размером */
+        .right-box {
+            position: fixed;
+            top: 50px;
+            right: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-box">Left Box</div>
+    <div class="right-box">Right Box</div>
+</div>
+
+</body>
+</html>

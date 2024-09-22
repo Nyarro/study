@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Cool Shop</title>
@@ -17,7 +17,7 @@
         aside {
             display: inline-block;
             width: 230px;
-            margin: 0 50px 0 80px;
+            margin: 0 50px 0 0;
         }
 
         .logo {
@@ -79,6 +79,10 @@
             padding: 20px 0;
         }
 
+        .section.full {
+            margin: 0 80px;
+        }
+
         .menu {
         }
 
@@ -119,6 +123,7 @@
             height: 160px;
             margin: 0 10px 15px 40px;
             box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
         }
 
         .photo-half {
@@ -162,8 +167,8 @@
             text-align: center;
             vertical-align: middle;
             font-size: 16px;
-
         }
+
 
         .price-aside {
             display: inline-block;
@@ -171,6 +176,26 @@
         }
 
         .price-main {
+            vertical-align: middle;
+        }
+
+        .price-bottom {
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-sale {
+            color: rgba(237, 171, 137, 0.4);
+            position: absolute;
+            font-size: 24px;
+            bottom: 3px;
+            left: 64px;
+        }
+
+        .price-sale-bottom {
+            position: relative;
+            margin-top: 12px;
+
         }
 
         .price-logo {
@@ -238,6 +263,14 @@
             vertical-align: top;
         }
 
+        main :last-child {
+            border-bottom: 0
+        }
+
+        footer:last-child {
+            border-bottom: 0;
+        }
+
         .logo-main {
             content: url("main-logo.png");
             margin-top: 30px;
@@ -247,13 +280,17 @@
 
         }
 
-        .top-card-list .text-card-list-main {
-            font-size: 28px;
-            color: white;
-            margin: 10px 0 25px 30px;
+        .bottom-card-list {
+
         }
 
-        .top-card-list .card-list {
+        .text-card-list-main {
+            font-size: 28px;
+            color: white;
+            margin: 10px 0 10px 30px;
+        }
+
+        .card-list {
 
         }
 
@@ -261,6 +298,7 @@
             display: inline-block;
             padding: 15px;
             margin-left: 30px;
+            position: relative;
         }
 
         .card-main-full:first-child {
@@ -273,160 +311,331 @@
             border-radius: 20px;
         }
 
-        .top-card-list .card-main {
+        .card-main {
             position: relative;
             height: 180px;
             width: 180px;
             border-radius: 20px;
-            background-image: url("iphone15.png");
+            background-image: url("DDR5_SDRAM_IMGP6304_smial_wp.jpg");
             background-size: cover;
             background-position: center;
-            overflow: hidden;
+            z-index: 2;
         }
 
         .card-main-full .main-card-text {
             margin-top: 7px;
         }
 
-        .cart-bg {
+        .bubble-bg {
             background-color: rgba(229, 107, 110, 0.5);
             height: 56px;
             width: 56px;
             border-radius: 56px;
-            vertical-align: middle;
-            position: absolute;
+        }
+
+        .bubble-bg-main {
             top: 50%;
             left: 34%;
+            position: absolute;
+        }
+
+        .bubble-bg-sale {
+            background-color: rgba(229, 107, 110, 0.5);
+            left: 77%;
+            top: -2%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .bubble-bg-next {
+            background-color: rgba(229, 107, 110, 0.5);
+            margin-left: 10px;
+            display: inline-block;
+            position: relative;
+            bottom: 100px;
+        }
+
+        .bubble-bg-btm {
+            background-color: rgba(237, 171, 137, 0.4);
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .icon {
+            height: 36px;
+            width: 36px;
+            border-radius: 20px;
+            background-size: 18px 18px;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .next-icon {
+            background-image: url("https://cdn-icons-png.flaticon.com/512/130/130884.png");
+            top: 10px;
+            right: 10px;
+            background-color: #ffffff;
+            position: absolute;
+        }
+
+        .icon-sale {
+            background-image: url("percent 1.png");
+            top: 5px;
+            right: 3px;
+            z-index: 3;
+            background-color: #ffffff;
+            position: absolute;
+        }
+
+        .icon-btm {
+            background-image: url("https://cdn.icon-icons.com/icons2/2742/PNG/512/arrow_up_icon_175856.png");
+            background-color: rgba(237, 171, 137, 1);
+            margin: 10px;
+
+        }
+
+        .text-back-to {
+            color: white;
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .text-mid{
+            color: white;
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 500px;
         }
     </style>
 </head>
 <body>
-<aside>
-    <div class="logo section">
-        <div class="logo-left"></div>
-        <div class="cart">
-            <div class="cart-img-logo"></div>
-            <div class=" counter-main counter-cart">0</div>
+<div class="section full">
+    <aside>
+        <div class="logo section">
+            <div class="logo-left"></div>
+            <div class="cart">
+                <div class="cart-img-logo"></div>
+                <div class=" counter-main counter-cart">0</div>
+            </div>
         </div>
+        <div class="menu section">
+            <nav>
+                <div class="menu-item">
+                    <div class="text-menu">Clothing</div>
+                    <div class="counter-main counter-menu"> 120</div>
+                </div>
+                <div class="menu-item">
+                    <div class="text-menu">Electronics</div>
+                    <div class="counter-main counter-menu"> 8</div>
+                </div>
+                <div class="menu-item">
+                    <div class="text-menu">Lifestyle</div>
+                    <div class="counter-main counter-menu"> 10</div>
+                </div>
+                <div class="menu-item">
+                    <div class="text-menu">Home&Furniture</div>
+                    <div class="counter-main counter-menu"> 8</div>
+                </div>
+                <div class="menu-item">
+                    <div class="text-menu">Cosmetics</div>
+                    <div class="counter-main counter-menu"> 10</div>
+                </div>
+                <div class="menu-item">
+                    <div class="text-menu">Pets Goods</div>
+                    <div class="counter-main counter-menu"> 10</div>
+                </div>
+            </nav>
+        </div>
+        <div class="site-bar-card-list section">
+            <div class=text-under-menu>Recently Watched</div>
+            <div class="card">
+                <div class="photo-half"
+                     style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
+                </div>
+                <div class="under-half">
+                    <div class="name-price">
+                        <div class="card-text card-text-aside"> Hoodie</div>
+                        <div class="price-logo">
+                            <div class="price price-aside"> 600$</div>
+                            <div class="icon-cart icon-cart-aside"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo-half"
+                     style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
+                </div>
+                <div class="under-half">
+                    <div class="name-price">
+                        <div class="card-text card-text-aside"> Hoodie</div>
+                        <div class="price-logo">
+                            <div class="price price-aside"> 600$</div>
+                            <div class="icon-cart icon-cart-aside"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo-half"
+                     style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
+                </div>
+                <div class="under-half">
+                    <div class="name-price">
+                        <div class="card-text card-text-aside"> Hoodie</div>
+                        <div class="price-logo">
+                            <div class="price price-aside"> 600$</div>
+                            <div class="icon-cart icon-cart-aside"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-and5more">and 5 more</div>
+        </div>
+    </aside>
+    <main>
+        <div class="logo-main"></div>
+        <div class="top-card-list section">
+            <div class="text-card-list-main"> Electronics</div>
+            <div class="card-list">
+                <div class="card-main-full">
+                    <div class="card-main">
+                        <div class="bubble-bg bubble-bg-main">
+                            <div class="icon-cart icon-cart-main"></div>
+                        </div>
+                    </div>
+                    <div class="main-card-text">
+                        <div class="card-text card-text-main">DDR 5 RAM</div>
+                        <div class="price price-main">700$</div>
+                    </div>
+                </div>
+                <div class="card-main-full">
+                    <div class="card-main">
+                        <div class="bubble-bg bubble-bg-main">
+                            <div class="icon-cart icon-cart-main"></div>
+                        </div>
+                    </div>
+                    <div class="main-card-text">
+                        <div class="card-text card-text-main">DDR 5 RAM</div>
+                        <div class="price price-bottom">700$</div>
+                    </div>
+                </div>
+                <div class="card-main-full">
+                    <div class="card-main">
+                        <div class="bubble-bg bubble-bg-main">
+                            <div class="icon-cart icon-cart-main"></div>
+                        </div>
+                    </div>
+                    <div class="main-card-text">
+                        <div class="card-text card-text-main">DDR 5 RAM</div>
+                        <div class="price price-bottom">700$</div>
+                    </div>
+                </div>
+                <div class="card-main-full">
+                    <div class="card-main">
+                        <div class="bubble-bg bubble-bg-main">
+                            <div class="icon-cart icon-cart-main"></div>
+                        </div>
+                    </div>
+                    <div class="main-card-text">
+                        <div class="card-text card-text-main">DDR 5 RAM</div>
+                        <div class="price price-bottom">700$</div>
+                    </div>
+                </div>
+                <div class="bubble-bg bubble-bg-next">
+                    <div class="icon next-icon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-card-list section">
+            <div class="text-card-list-main"> On Sale</div>
+            <div class="card-list">
+                <div class="card-main-full">
+                    <div class="bubble-bg bubble-bg-sale"></div>
+                    <div class="icon icon-sale"></div>
+                    <div class="card-main">
+                        <div class="bubble-bg bubble-bg-main">
+                            <div class="icon-cart icon-cart-main"></div>
+                        </div>
+                    </div>
+                    <div class="main-card-text">
+                        <div class="card-text card-text-main">DDR 5 RAM</div>
+                        <div class="price-sale-bottom">
+                            <div class="price price-bottom">500$</div>
+                            <div class="price price-sale">700$</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-main-full">
+                    <div class="bubble-bg bubble-bg-sale"></div>
+                    <div class="icon icon-sale"></div>
+                    <div class="card-main">
+                        <div class="bubble-bg bubble-bg-main">
+                            <div class="icon-cart icon-cart-main"></div>
+                        </div>
+                    </div>
+                    <div class="main-card-text">
+                        <div class="card-text card-text-main">DDR 5 RAM</div>
+                        <div class="price-sale-bottom">
+                            <div class="price price-bottom">500$</div>
+                            <div class="price price-sale">700$</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-main-full">
+                    <div class="bubble-bg bubble-bg-sale"></div>
+                    <div class="icon icon-sale"></div>
+                    <div class="card-main">
+                        <div class="bubble-bg bubble-bg-main">
+                            <div class="icon-cart icon-cart-main"></div>
+                        </div>
+                    </div>
+                    <div class="main-card-text">
+                        <div class="card-text card-text-main">DDR 5 RAM</div>
+                        <div class="price-sale-bottom">
+                            <div class="price price-bottom">500$</div>
+                            <div class="price price-sale">700$</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-main-full">
+                    <div class="bubble-bg bubble-bg-sale"></div>
+                    <div class="icon icon-sale"></div>
+                    <div class="card-main">
+                        <div class="bubble-bg bubble-bg-main">
+                            <div class="icon-cart icon-cart-main"></div>
+                        </div>
+                    </div>
+                    <div class="main-card-text">
+                        <div class="card-text card-text-main">DDR 5 RAM</div>
+                        <div class="price-sale-bottom">
+                            <div class="price price-bottom">500$</div>
+                            <div class="price price-sale">700$</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bubble-bg bubble-bg-next">
+                    <div class="icon next-icon"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<footer class="section full">
+    <div style="display: inline-block">
+        <div class="bubble-bg bubble-bg-btm">
+            <div class="icon icon-btm"></div>
+        </div>
+        <div class="text-back-to">back to top</div>
     </div>
-    <div class="menu section">
-        <nav>
-            <div class="menu-item">
-                <div class="text-menu">Clothing</div>
-                <div class="counter-main counter-menu"> 120</div>
-            </div>
-            <div class="menu-item">
-                <div class="text-menu">Electronics</div>
-                <div class="counter-main counter-menu"> 8</div>
-            </div>
-            <div class="menu-item">
-                <div class="text-menu">Lifestyle</div>
-                <div class="counter-main counter-menu"> 10</div>
-            </div>
-            <div class="menu-item">
-                <div class="text-menu">Home&Furniture</div>
-                <div class="counter-main counter-menu"> 8</div>
-            </div>
-            <div class="menu-item">
-                <div class="text-menu">Cosmetics</div>
-                <div class="counter-main counter-menu"> 10</div>
-            </div>
-            <div class="menu-item">
-                <div class="text-menu">Pets Goods</div>
-                <div class="counter-main counter-menu"> 10</div>
-            </div>
-        </nav>
+    <div class="text-mid">
+    <div style="text-align: center">2021</div>
+        <div>coolshop.ink</div>
     </div>
-    <div class="site-bar-card-list section">
-        <div class=text-under-menu>Recently Watched</div>
-        <div class="card">
-            <div class="photo-half"
-                 style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
-            </div>
-            <div class="under-half">
-                <div class="name-price">
-                    <div class="card-text card-text-aside"> Hoodie</div>
-                    <div class="price-logo">
-                        <div class="price price-aside"> 600$</div>
-                        <div class="icon-cart icon-cart-aside"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="photo-half"
-                 style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
-            </div>
-            <div class="under-half">
-                <div class="card-text card-text-aside"> Hoodie</div>
-                <div class="price price-aside"> 600$</div>
-                <div class="icon-cart icon-cart-aside"></div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="photo-half"
-                 style="background-image: url('https://premieresociety.com/1105-thickbox_default/3d-hoodie-black.jpg')">
-            </div>
-            <div class="under-half">
-                <div class="card-text card-text-aside"> Hoodie</div>
-                <div class="price price-aside"> 600$</div>
-                <div class="icon-cart icon-cart-aside"></div>
-            </div>
-        </div>
-        <div class="text-and5more">and 5 more</div>
-    </div>
-</aside>
-<main>
-    <div class="logo-main"></div>
-    <div class="top-card-list section">
-        <div class="text-card-list-main"> Electronics</div>
-        <div class="card-list">
-            <div class="card-main-full">
-                <div class="card-main">
-                    <div class="cart-bg">
-                        <div class="icon-cart icon-cart-main"></div>
-                    </div>
-                </div>
-                <div class="main-card-text">
-                    <div class="card-text card-text-main">Iphone</div>
-                    <div class="price price-main">700$</div>
-                </div>
-            </div>
-            <div class="card-main-full">
-                <div class="card-main">
-                    <div class="cart-bg">
-                        <div class="icon-cart icon-cart-main"></div>
-                    </div>
-                </div>
-                <div class="main-card-text">
-                    <div class="card-text card-text-main">Iphone</div>
-                    <div class="price price-main">700$</div>
-                </div>
-            </div>
-            <div class="card-main-full">
-                <div class="card-main">
-                    <div class="cart-bg">
-                        <div class="icon-cart icon-cart-main"></div>
-                    </div>
-                </div>
-                <div class="main-card-text">
-                    <div class="card-text card-text-main">Iphone</div>
-                    <div class="price price-main">700$</div>
-                </div>
-            </div>
-            <div class="card-main-full">
-                <div class="card-main">
-                    <div class="cart-bg">
-                        <div class="icon-cart icon-cart-main"></div>
-                    </div>
-                </div>
-                <div class="main-card-text">
-                    <div class="card-text card-text-main">Iphone</div>
-                    <div class="price price-main">700$</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+    <div class="logo-left"></div>
+</footer>
 </body>
 </html>
