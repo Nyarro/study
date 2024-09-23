@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .layout {
+            width: 100%;
+            max-width: 1920px;
+            background: #1b3980;
+            min-height: 100px;
+            gap: 20px 10px;
+            margin: 0 auto;
+            display: flex;
+            justify-items: stretch;
+            flex-wrap: wrap;
+            /*align-items: center;*/
+            /*align-content: center;*/
+        }
+        aside {
+            flex-basis: 20%;
+            min-width: 200px;
+        }
+        main {
+            flex-grow: 1;
+        }
+        footer {
+            flex-basis: 100%;
+        }
+
+        @media all and (max-width: 1024px) {
+            aside {
+                display: none;
+            }
+            main {
+                flex-basis: 100%;
+            }
+        }
+        @media all and (max-width: 680px) {
+
+        }
+        @media all and (max-width: 380px) {
+
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <aside>some text aside</aside>
+    <main>some text main</main>
+    <footer>footer</footer>
+</div>
+</body>
+</html>

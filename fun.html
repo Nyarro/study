@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding: 200px 0 0;
+        }
+
+        @keyframes myAwesomeAnimation {
+            0% {
+                width: 100px;
+            }
+            25% {
+                width: 400px;
+            }
+            50% {
+                width: 320px;
+            }
+            75% {
+                width: 250px;
+            }
+            100% {
+                width: 100px;
+            }
+        }
+
+        .funny-square {
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            background: #e56b6e;
+            transition: width 300ms linear;
+            /*transition: width 300ms cubic-bezier(0.34, 1.56, 0.64, 1);*/
+            /*animation: myAwesomeAnimation 10s linear infinite;*/
+        }
+        .funny-square:hover {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="funny-square">
+
+</div>
+
+</body>
+</html>
