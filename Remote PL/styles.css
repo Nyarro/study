@@ -1,0 +1,140 @@
+
+body {
+    margin: 0;
+
+}
+
+header {
+    background-image: url("Remote Retrospectives using Targetprocess.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-basis: 100%;
+    height: 860px;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    z-index: 1;
+    flex-basis: 100%;
+    justify-content: space-between;
+    padding: 15px 20px;
+    max-height: 25px;
+}
+
+nav .nav-top-left-menu {
+    display: flex;
+    gap: 0 30px;
+}
+
+nav .nav-top-right-menu {
+    display: flex;
+    gap: 0 40px;
+    justify-content: flex-end;
+}
+
+nav .nav-top-right-menu .search-logo {
+    content: url("research.png");
+    height: 13px;
+
+}
+
+
+.nav-text {
+    font-family: Fira Sans, sans-serif;
+    font-size: 11px;
+    align-items: center;
+}
+
+.nav-text:hover {
+    cursor: pointer;
+}
+
+.nav-text .menu-logo-text {
+    display: flex;
+    gap: 0 5px;
+}
+
+.nav-text .logo-icn {
+    content: url("Group 73.svg");
+    height: 13px;
+}
+
+.nav-text .nav-menu-text-white {
+    color: white;
+}
+
+.nav-text .nav-menu-text-green {
+    color: #5da75c;
+}
+
+.nav-text .bubble {
+    background-color: #5da75c;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 18px;
+}
+
+.header-bottom-part {
+    display: flex;
+    gap: 130px;
+    margin: 200px 60px;
+}
+
+.left-side-text-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.logo-cont {
+    display: flex;
+    gap: 0 20px;
+}
+
+.header-logo {
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.header-text {
+    font-size: 60px;
+    color: white;
+    max-width: 500px;
+    text-align: left;
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.header-menu-element {
+    font-family: Fira Sans, sans-serif;
+    font-size: 11px;
+    color: white;
+    z-index: 1;
+}
+.header-menu-element:hover {
+    cursor: pointer;
+}
+
+.bc-text {
+    font-family: Fira Sans, sans-serif;
+    font-size: 200px;
+    position: absolute;
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.2);
+    top: 140px;
+}
+
+header .under-text {
+    color :white;
+    font-family: Fira Sans, sans-serif;
+    font-size: 10px;
+    margin: 250px 60px;
+}
