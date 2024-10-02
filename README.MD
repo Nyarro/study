@@ -25,6 +25,10 @@ no space means <b>and</b>
 `.el-1 .el-2` means el-2 inside el-1
 `.el-1.el-2` means el-2 and el-1
 
+#nesting and neighbourhood
+space - means inside
+ more ()   = 
+
 selector syntax can be combined
 `[rel] .el-1` means element with class el-1 inside element with attribute rel
 `[rel] [class="el-1"]` means elements with class attribute value "el-1" inside elements with rel
@@ -44,3 +48,5 @@ selector syntax can be combined
 `:nth-child(even)` - even elements
 
 `.el-1 :hover` 
+
++ next el after

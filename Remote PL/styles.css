@@ -11,7 +11,7 @@ header {
     background-repeat: no-repeat;
     flex-basis: 100%;
     height: 860px;
-    z-index: -1;
+    z-index: 0;
 }
 
 nav {
@@ -20,7 +20,6 @@ nav {
     flex-basis: 100%;
     justify-content: space-between;
     padding: 15px 20px;
-    max-height: 25px;
 }
 
 nav .nav-top-left-menu {
@@ -113,14 +112,22 @@ nav .nav-top-right-menu .search-logo {
     margin-top: 20px;
 }
 
-.header-menu-element {
+.header-menu-text {
     font-family: Fira Sans, sans-serif;
     font-size: 11px;
     color: white;
     z-index: 1;
 }
-.header-menu-element:hover {
+
+.header-menu-text:hover {
     cursor: pointer;
+
+}
+
+
+.header-menu-text:hover + .bc-text {
+    display: block;
+
 }
 
 .bc-text {
@@ -130,11 +137,105 @@ nav .nav-top-right-menu .search-logo {
     z-index: 0;
     color: rgba(255, 255, 255, 0.2);
     top: 140px;
+    display: none;
 }
 
 header .under-text {
-    color :white;
+    color: white;
     font-family: Fira Sans, sans-serif;
     font-size: 10px;
     margin: 250px 60px;
 }
+
+main {
+    font-family: Fira Sans, sans-serif;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    margin: 80px 50px;
+    flex-basis: 70%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.main-text {
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+.text-header {
+    font-size: 36px;
+}
+
+.image {
+    display: flex;
+    max-width: 400px;
+}
+
+.main-nav-menu {
+    flex-basis: 30%;
+    min-width: 200px;
+    margin: 80px 50px;
+    font-size: 10px;
+    position: sticky;
+}
+
+ul {
+    margin: 20px
+}
+
+.main-nav-menu .circle-text {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main-nav-menu .text {
+    font-size: 15px;
+    border-bottom-style: solid;
+    border-color: rgba(128, 128, 128, 0.2);
+    padding: 0 150px 20px 0;
+}
+
+.nav-header {
+    padding: 0 0 0 58px;
+}
+
+li {
+    list-style: none;
+}
+
+.circle {
+    border-radius: 20px;
+    position: absolute;
+}
+
+.circle-active {
+    padding: 5px;
+    background-color: #f6d973;
+    top: 4px;
+    left: -22px;
+}
+
+.circle-unactive {
+    padding: 2px;
+    background-color: #e5e5e5;
+    top: 6px;
+    left: -20px;
+}
+
+
+/*@media all and (max-width: 1024px) {
+    .main-nav-menu {
+        display: none;
+    }
+
+    .main-content {
+        flex-basis: 100%;
+    }
+}*/
