@@ -2,13 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            height: 500px;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            position: sticky;
+
+        }
+
+        .content {
+            flex-grow: 1;
+            background-color: lightgray;
+        }
+    </style>
 </head>
 <body>
-<div style="display: inline-block; background-color: pink; width: 120px; height: 100px; margin: 50px 20px 0 10px">
-    <div style="width: 100px; height: 100px; background-color: purple; margin-bottom: 60px"></div>
-    <div style="width: 100px; height: 100px; background-color: blue"></div>
-</div>
-<div style="display: inline-block; background-color: yellow; width: 100px; height: 100px;">
+<main class="container">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">
+        <p>Content goes here...</p>
+        <p>Scroll down to see sticky effect.</p>
+    </div>
+</main>
 </body>
 </html>
