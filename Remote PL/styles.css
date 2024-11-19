@@ -454,7 +454,7 @@ ul {
 
 .footer-li-cont {
     color: rgba(255, 255, 255, 0.3);
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: 20px;
 }
@@ -479,29 +479,44 @@ ul.footer-li-cont > li:last-child {
     margin-top: 80px;
 }
 
-.footer-icon-bar{
+.footer-icon-bar {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 60px;
 }
-
-.footer-icon-bar li{
+ul.footer-icon-bar li:first-child ul {
     display: flex;
-    gap: 25px;
 }
 
-ul.footer-icon-bar li + li ul li:last-child{
+ul.footer-icon-bar li:first-child ul li {
+    flex: 40%;
+    display: flex;
+    gap: 4%;
+    align-items: center
+
+}
+
+
+ul.footer-icon-bar > li:last-child {
     color: rgba(255, 255, 255, 0.75);
+    display: flex;
 }
 
-ul.footer-icon-bar p  {
-    font-size: 10px;
+ul.footer-icon-bar > li:last-child ul {
+    flex: 40%;
+}
+
+ul.footer-icon-bar p {
+    font-size: 12px;
 }
 
 ul.footer-icon-bar span {
-    font-size: 10px;
+    font-size: 12px;
+    color: white;
 }
+
+
 
 /*@media all and (max-width: 1024px) {
     .main-nav-menu {
