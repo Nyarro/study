@@ -185,14 +185,6 @@ main {
 
 }
 
-.image1 {
-    background-image: url("image 26.jpg");
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat;
-    height: 353px;
-}
-
 .image-text {
     font-size: 12px;
     margin-top: 30px;
@@ -205,8 +197,6 @@ main {
     border-radius: 10px;
     transform: rotate(45deg);
     background-color: #5da75c;
-    top: 80px;
-    right: 275px;
 }
 
 .image-button-left {
@@ -216,9 +206,10 @@ main {
     border-radius: 10px;
     transform: rotate(45deg);
     background-color: #a8cfa8;
-    top: 95px;
-    left: -15px;
+}
 
+*{
+    outline: steelblue 4px solid;
 }
 
 .image-button-icon {
@@ -294,8 +285,8 @@ main {
 }
 
 .main-nav-menu {
-    flex: 10%;
-    margin: 80px 0;
+    flex: 30%;
+    margin: 80px 4vw;
     font-size: 10px;
     position: sticky;
     top: 100px;
@@ -324,7 +315,9 @@ main {
 }
 
 .nav-header {
-    padding: 0 0 0 58px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 li {
@@ -384,7 +377,8 @@ footer {
     background-color: #eec515;
     border-radius: 30px;
     padding: 10px 35px;
-    position: absolute;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 .footer-button-lets-stats:hover {
@@ -530,26 +524,67 @@ ul.footer-icon-bar span {
     color: white;
 }
 
-
-/**{
-    outline: 4px solid green !important;
-} */
-
 @media all and (max-width: 1200px) {
-    .main-text {
-        font-size: 20px;
-    }
-    .text-header {
-        font-size: 34px;
+    .footer-img {
+        display: none;
     }
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1100px) {
+    .nav-header {
+        cursor: pointer;
+        background-color: #ebc641;
+        font-size: 12px;
+        text-align: center;
+        font-weight: bold;
+
+    }
+
+    .ul-sticky {
+        display: none;
+        position: absolute;
+        left: -185%;
+        top: -48%;
+        background-color: #f1f1f1;
+    }
+
+    .circle {
+        display: none;
+    }
+
+    .main-nav-menu:hover .ul-sticky {
+        display: block;
+    }
+
+    .main-nav-menu .text {
+        border-bottom-style: none;
+    }
+
+    .main-nav-menu .text:hover {
+        background-color: #f6d973;
+    }
+
+    .main-nav-menu .circle-text {
+        margin-bottom: 0;
+    }
+
+    .main-content {
+        margin: 80px 2vw;
+    }
+
+    .main-nav-menu {
+        margin: 80px 2vw;
+    }
+}
+
+@media all and (max-width: 1000px) {
     .main-nav-menu {
         display: none;
     }
 
-    .main-content {
-        flex-basis: 100%;
+    .image {
+        max-width: 100%;
+        height: auto;
     }
+
 }
