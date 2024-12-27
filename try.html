@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выпадающее меню</title>
+    <title>Flexbox по контенту с переносом</title>
     <style>
-        .class1.ad1 {
-            color: red;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f0f0f0;
+            padding: 10px;
         }
 
+        .item {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
-<div class="class1">
-    <p class="ad1">123241</p>
+
+<div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
 </div>
-<p>14124</p>
+
 </body>
 </html>
